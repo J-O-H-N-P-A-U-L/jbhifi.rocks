@@ -1,21 +1,21 @@
 ---
-title: lynxshop.tk
+title: JB Hi-Fi Rocks
 ---
 <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
   <ul class="orbit-container">
     <button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span>&#9664;</button>
     <button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span>&#9654;</button>
     <li class="orbit-slide is-active">
-      <img src="/images/lynx_grey_matter.jpg">
+      <img src="/carousel/guitars.jpg">
     </li>
     <li class="orbit-slide">
-      <img src="/images/lynx_poster.jpg">
+      <img src="/carousel/pompeii.jpg">
     </li>
     <li class="orbit-slide">
-      <img src="/images/lynx_casino.jpg">
+      <img src="/carousel/cropped-Schoenhals1.jpg">
     </li>
     <li class="orbit-slide">
-      <img src="/images/ad_atari_fin_jos_kavereiden.jpg">
+      <img src="/carousel/jimmy_page.jpg">
     </li>
   </ul>
   <nav class="orbit-bullets">
@@ -27,13 +27,13 @@ title: lynxshop.tk
   </nav>
 </div>
 <div class="row column text-center">
-  <h2>Buy Atari Lynx Consoles</h2>
+  <h2 class="red-crazy-font-headings">Buy Electric Guitars</h2>
   <hr>
 </div>
 <div class="row small-up-2 large-up-4">
   <% data.contentful.product.each do |elem| %>
       <% p = elem[1] %>
-      <% if p.categories.first.title == 'Console' %>
+      <% if p.categories.first.title == 'Rare Electric Guitars' %>
       <div class="column">
         <a href='<%= "products/#{p.slug}.html" %>'>
           <%= image_tag(p.image.first.url, :alt => p.image.first.title, :class => "thumbnail") %>
@@ -48,12 +48,12 @@ title: lynxshop.tk
 <hr>
 <div class="row column">
   <div class="callout primary">
-    <h3>Really big specials this week on games!</h3>
+    <h3>Really big specials this week on musical instruments!</h3>
   </div>
 </div>
 <hr>
 <div class="row column text-center">
-  <h2>Buy Atari Lynx Games</h2>
+  <h2 class="red-crazy-font-headings">Buy Musical Instruments</h2>
   <hr>
 </div>
 <div class="row small-up-2 medium-up-3 large-up-6">
@@ -65,14 +65,14 @@ title: lynxshop.tk
   </div> -->
   <% data.contentful.product.each do |elem| %>
       <% p = elem[1] %>
-      <% if p.categories.first.title == 'Game' %>
+      <% if p.categories.first.title == 'Musical Instruments' %>
           <div class="column">
             <a href='<%= "products/#{p.slug}.html" %>'>
               <%= image_tag(p.image.first.url, :alt => p.image.first.title, :class => "thumbnail") %>
             </a>
             <h5><%= p.productName %></h5>
             <p><%= number_to_currency(p.price, :unit => "$") %></p>
-            <%= snipcart_button p, "Buy Now" %>
+            <%= snipcart_button_small p, "Buy Now" %>
           </div>
       <% end %>
   <% end %>
@@ -80,57 +80,60 @@ title: lynxshop.tk
 <hr>
 <div class="row">
   <div class="medium-4 columns">
-    <h4>Memorabilia</h4>
+    <h4>Top Musical Instruments</h4>
     <% data.contentful.product.each do |elem| %>
         <% p = elem[1] %>
-        <% if p.categories.first.title == 'clothing' %>
+        <% if p.categories.first.title == 'Musical Instruments' %>
             <div class="media-object">
               <div class="media-object-section">
                 <a href='<%= "products/#{p.slug}.html" %>'>
-                <%= image_tag(p.image.first.url, :alt => p.image.first.title, :class => "thumbnail") %>
+                <%= image_tag(p.image.first.url, :alt => p.image.first.title, :class => "thumbnail", :width => "100px") %>
                 </a>
               </div>
               <div class="media-object-section">
                 <h5><%= p.productName %></h5>
                 <p><%= number_to_currency(p.price, :unit => "$") %></p>
+                <%= snipcart_button_xsmall p, "Buy Now" %>
               </div>
             </div>
         <% end %>
     <% end %>
   </div>
   <div class="medium-4 columns">
-    <h4>Memorabilia</h4>
+    <h4>Top Musical Instruments</h4>
     <% data.contentful.product.each do |elem| %>
         <% p = elem[1] %>
-        <% if p.categories.first.title == 'clothing' %>
+        <% if p.categories.first.title == 'Musical Instruments' %>
             <div class="media-object">
               <div class="media-object-section">
                 <a href='<%= "products/#{p.slug}.html" %>'>
-                  <%= image_tag(p.image.first.url, :alt => p.image.first.title, :class => "thumbnail") %>
+                  <%= image_tag(p.image.first.url, :alt => p.image.first.title, :class => "thumbnail", :width => "100px") %>
                 </a>
               </div>
               <div class="media-object-section">
                 <h5><%= p.productName %></h5>
                 <p><%= number_to_currency(p.price, :unit => "$") %></p>
+                <%= snipcart_button_xsmall p, "Buy Now" %>
               </div>
             </div>
         <% end %>
     <% end %>
   </div>
   <div class="medium-4 columns">
-    <h4>Memorabilia</h4>
+    <h4>Top Musical Instruments</h4>
     <% data.contentful.product.each do |elem| %>
         <% p = elem[1] %>
-        <% if p.categories.first.title == 'clothing' %>
+        <% if p.categories.first.title == 'Musical Instruments' %>
             <div class="media-object">
               <div class="media-object-section">
                 <a href='<%= "products/#{p.slug}.html" %>'>
-                  <%= image_tag(p.image.first.url, :alt => p.image.first.title, :class => "thumbnail") %>
+                  <%= image_tag(p.image.first.url, :alt => p.image.first.title, :class => "thumbnail", :width => "100px") %>
                 </a>
               </div>
               <div class="media-object-section">
                 <h5><%= p.productName %></h5>
                 <p><%= number_to_currency(p.price, :unit => "$") %></p>
+                <%= snipcart_button_xsmall p, "Buy Now" %>
               </div>
             </div>
         <% end %>

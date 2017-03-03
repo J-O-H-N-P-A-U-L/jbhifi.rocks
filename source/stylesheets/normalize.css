@@ -3,6 +3,93 @@
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
+/*
+ * JB Hi-Fi webfonts
+ */
+@font-face {
+    font-family: 'jb_crazy_fontregular';
+    src: url('jb_crazy_font-webfont.woff2') format('woff2'),
+    url('jb_crazy_font-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'jbgoestohollywoodregular';
+    src: url('jbgoestohollywood-webfont.woff2') format('woff2'),
+    url('jbgoestohollywood-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+0-2f, U+40-10FFFF, U+0025-29;
+
+}
+
+@font-face {
+    font-family: 'jbsmashingpricesregular';
+    src: url('jb_smashing_prices-webfont.woff2') format('woff2'),
+    url('jb_smashing_prices-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+30-39;
+
+}
+
+@font-face {
+    font-family: myArial;
+    src: local("Arial");
+    unicode-range: U+00A9;
+}
+
+/* change default font */
+body{
+    font-family: jbgoestohollywoodregular, jbsmashingpricesregular;
+    /* background-color: #ffec0f; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: jbgoestohollywoodregular, jbsmashingpricesregular, Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+}
+
+.symbol-fix {
+    font-family: Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+}
+
+.crazy-font{
+    font-family:jb_crazy_fontregular;
+}
+
+.red-crazy-font-headings{
+    font-family:jb_crazy_fontregular;
+    background-color: #ff0000;
+    color: #ffffff;
+    text-shadow: -2px 0 #000000, 0 2px #000000, 2px 0 #000000, 0 -2px #000000;
+}
+
+
+.main-logo-crazy-font{
+    font-family:jb_crazy_fontregular;
+    font-size: 34px;
+    color: #ffffff;
+    text-shadow: -2px 0 #000000, 0 2px #000000, 2px 0 #000000, 0 -2px #000000;
+    margin-top: -25px;
+    margin-bottom: -5px;
+}
+.main-logo img {
+    /* width: 250px; */
+    border: 2px;
+    border-radius: 8px;
+    border-style: solid;
+    padding-top: 12px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.main-logo-crazy-font span{
+    background-color: #ff0000;
+    margin: -2px -6px -2px 1px;
+    padding: 2px 7px 1px 12px;
+}
 
 /*
  * Corrects `block` display not defined in IE 8/9.
@@ -308,6 +395,33 @@ input[disabled] {
 }
 
 /*
+ * Change button appearance
+ */
+
+.button {
+    background-color: #28bd2d;
+    color: #fff;
+}
+
+.button:focus, .button:hover {
+    background-color: #209b24;
+    color: #fff;
+}
+
+.button.hollow {
+    border: 1px solid #28bd2d;
+    color: #28bd2d;
+}
+.button.hollow:focus, .button.hollow:hover {
+    border-color: #209b24;
+    color: #209b24;
+}
+
+.button.x-small{
+    width: 150px;
+}
+
+/*
  * 1. Addresses box sizing set to `content-box` in IE 8/9.
  * 2. Removes excess padding in IE 8/9.
  */
@@ -386,6 +500,24 @@ table {
     position: relative;
     top: 10px; }
 
+.top-bar {
+    text-align: center;
+    background: #ffec0f;
+}
+
+.thumbnail:focus, .thumbnail:hover {
+    box-shadow: 0 0 6px 1px #0a0a0a;
+}
+
+.callout.primary {
+    background-color: #ffec0f;
+}
+
+.breadcrumbs a {
+    color: #2199e8;
+    font-size: 26px;
+}
+
 /* Medium-Up Navigation */
 @media only screen and (min-width: 40rem) {
     .logo-wrapper {
@@ -411,5 +543,26 @@ table {
     .top-bar-left ul {
         float: right; } }
 
-.top-bar {
-    text-align: center; }
+
+
+/* footer styles */
+.panel-footer.panel-logo {
+    background: black;
+    color: white;
+    text-align: left;
+    border: none;
+}
+.panel-footer.panel-logo img {
+    height:25px;
+}
+.panel-footer.panel-copyright {
+    background: #1c1c1c;
+    color: #ffffff;
+    text-align: right;
+    border: none;
+}
+.panel-footer {
+    padding: 10px 15px;
+
+}
+

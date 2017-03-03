@@ -89,7 +89,7 @@ end
 helpers do
   def snipcart_button (p, text)
     args = {
-        "class" => "snipcart-add-item button expanded",
+        "class" => "snipcart-add-item button expanded crazy-font",
         "data-item-id" => p.id,
         "data-item-price" => p.price,
         "data-item-name" => p.productName,
@@ -98,10 +98,44 @@ helpers do
         "data-item-description" => p.productDescription,
         "data-item-image" => "http:#{p.image.first.url}"
     }
-
     content_tag :button, args do
       text
     end
   end
 end
 
+helpers do
+  def snipcart_button_small (p, text)
+    args = {
+        "class" => "snipcart-add-item button small expanded crazy-font",
+        "data-item-id" => p.id,
+        "data-item-price" => p.price,
+        "data-item-name" => p.productName,
+        "data-item-url" => current_page.url,
+        "data-item-max-quantity" =>  p.quantity,
+        "data-item-description" => p.productDescription,
+        "data-item-image" => "http:#{p.image.first.url}"
+    }
+    content_tag :button, args do
+      text
+    end
+  end
+end
+
+helpers do
+  def snipcart_button_xsmall (p, text)
+    args = {
+        "class" => "snipcart-add-item button x-small expanded crazy-font",
+        "data-item-id" => p.id,
+        "data-item-price" => p.price,
+        "data-item-name" => p.productName,
+        "data-item-url" => current_page.url,
+        "data-item-max-quantity" =>  p.quantity,
+        "data-item-description" => p.productDescription,
+        "data-item-image" => "http:#{p.image.first.url}"
+    }
+    content_tag :button, args do
+      text
+    end
+  end
+end
