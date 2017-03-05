@@ -565,4 +565,8 @@ table {
     padding: 10px 15px;
 
 }
-
+/* css hack to fix bug in orbital */
+.orbit-container, .orbit-slide {
+    height: auto !important;
+    max-height: 100% !important;
+}
